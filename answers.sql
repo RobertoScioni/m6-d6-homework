@@ -53,3 +53,28 @@ DELETE FROM public.customers
 UPDATE public.customers
 	SET region='Unknow'
 	    WHERE region ISNULL
+
+CREATE TABLE public.articles
+(
+    headline varchar(255) ,
+    "subHead" varchar(255) ,
+    content varchar(255) ,
+    cover varchar(255) ,
+    id SERIAL,
+    CONSTRAINT articles_pkey PRIMARY KEY (id)
+)
+
+CREATE TABLE public.authors
+(
+    name varchar(255) ,
+    img varchar(255) ,
+    CONSTRAINT authors_pkey PRIMARY KEY (name)
+)
+
+CREATE TABLE public.reviews
+(
+    txt varchar(255) ,
+    usr varchar(255) ,
+    id SERIAL,
+    CONSTRAINT reviews_pkey PRIMARY KEY (id)
+)
